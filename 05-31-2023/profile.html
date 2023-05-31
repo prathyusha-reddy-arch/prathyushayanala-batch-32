@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <h1>Prathyusha Yanala</h1>
+    </head>
+    <script>
+        var profile ={
+            firstName:"Prathyusha",
+            lastName:"Yanala",
+            DOB:"09-17-1999",
+            hobbies:[
+                {
+                    sporttype:[{
+                        type1:"Handball"
+                    },
+                    {
+                    type2:"Football"
+                    }],
+                }
+            ],
+            highestEducation:"MS in CS",
+            ethinicity:"Asian",
+            mobileNumber:"9876980784",
+            email:"ypr123@gmail.com",
+            technicalskills:["HTML","CSS","Java","MySQL"],
+            languagesKnown:"English",
+
+
+
+        }
+        console.log(profile);
+        
+        console.log("Most favourite hobby is: "+ profile.hobbies[0].sporttype[1].type2);
+        console.log("Most another favourite hobby is: "+ profile.hobbies[0].sporttype[0].type1);
+    </script>
+</html>
