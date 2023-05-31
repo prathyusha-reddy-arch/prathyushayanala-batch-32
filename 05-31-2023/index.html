@@ -1,0 +1,37 @@
+<html>
+    <h1>JS</h1>
+    <script>
+        var t=123;
+        const x=typeof t;
+        log(x);
+        var car ={
+            model:'2023',
+            color:'RR',
+            engine:[{
+                type:'hybrid',
+                torque:520,
+                engineModel:{
+                    type:"v8",
+                }
+            }]
+        }
+
+        var list=[];
+        list.push(10);
+        list.push(11);
+        list.push(16);
+        list.push(8);
+        list.push(7);
+        //list.splice(3,4);
+        const ind=list.findIndex(v=>v===7);
+        log(ind);
+        log (list);
+
+       // log(car.engine[0].torque);
+        //log(car.engine[0].engineModel.type);
+        //log(car.engine[0]);
+        function log(v){
+            console.log(v);
+        }
+    </script>
+</html>
