@@ -1,5 +1,8 @@
 <html>
     <h1>Prathyusha Yanala</h1>
+    <style>
+    
+    </style>
     <script>
 
         var environment;
@@ -8,6 +11,7 @@
 
         //implementing using if-else statement
         environment='stage'; 
+        if(amount>=100){
         if(environment=='dev'){
             sendAmount=amount+(amount*0.1);
         }
@@ -20,10 +24,14 @@
         else {
             sendAmount=amount+(amount*0.05);
         }
-        console.log(sendAmount);
+    }
+    else 
+    sendAmount=amount;
+        console.log("implementing using if-else statement for stage :" + sendAmount);
 
         //implementing using switch case
         environment='dev';
+        if(amount>=100){
         switch(environment){
             case 'dev': sendAmount=amount+(amount*0.1);
                 break;
@@ -36,12 +44,14 @@
                 default:"No match any of the mentioned environments";
                 break;       
         }
-        console.log(sendAmount);
+    }else 
+      sendAmount=amount;
+        console.log("implementing using switch case for dev: " +sendAmount);
 
         //implementing using ? ternary operator
         environment='test';
         sendAmount=environment=='dev'? amount+(amount*0.1):environment=='test'?amount+(amount*0.2):environment=='stage'?amount+(amount*0.3):environment=='prod'? amount+(amount*0.05):0;
-        console.log(sendAmount);
+        console.log("implementing using ? ternary operator for test "+ sendAmount);
 
         //implementing using for loop
         envArray=["dev","test","stage","prod"];
@@ -59,7 +69,7 @@
                 default:"No match any of the mentioned environments";
                 break;       
         }
-        console.log(sendAmount);
+        console.log("implementing using for loop: "+sendAmount);
         }
     </script>
     <body>
