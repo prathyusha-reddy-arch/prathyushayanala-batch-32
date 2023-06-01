@@ -2,10 +2,12 @@
     <h1>Prathyusha Yanala</h1>
     <script>
 
-        var environment='stage';
+        var environment;
         var amount=100;
         var sendAmount;
-        //if 
+
+        //implementing using if-else statement
+        environment='stage'; 
         if(environment=='dev'){
             sendAmount=amount+(amount*0.1);
         }
@@ -19,5 +21,48 @@
             sendAmount=amount+(amount*0.05);
         }
         console.log(sendAmount);
+
+        //implementing using switch case
+        environment='dev';
+        switch(environment){
+            case 'dev': sendAmount=amount+(amount*0.1);
+                break;
+            case 'test': sendAmount=amount+(amount*0.2);
+                break;
+            case 'stage': sendAmount=amount+(amount*0.3);
+                break;
+            case 'prod':sendAmount=amount+(amount*0.05);
+                break; 
+                default:"No match any of the mentioned environments";
+                break;       
+        }
+        console.log(sendAmount);
+
+        //implementing using ? ternary operator
+        environment='test';
+        sendAmount=environment=='dev'? amount+(amount*0.1):environment=='test'?amount+(amount*0.2):environment=='stage'?amount+(amount*0.3):environment=='prod'? amount+(amount*0.05):0;
+        console.log(sendAmount);
+
+        //implementing using for loop
+        envArray=["dev","test","stage","prod"];
+        for(var i=0;i<envArray.length;i++){
+             env=envArray[i];
+             switch(env){
+            case 'dev': sendAmount=amount+(amount*0.1);
+                break;
+            case 'test': sendAmount=amount+(amount*0.2);
+                break;
+            case 'stage': sendAmount=amount+(amount*0.3);
+                break;
+            case 'prod':sendAmount=amount+(amount*0.05);
+                break; 
+                default:"No match any of the mentioned environments";
+                break;       
+        }
+        console.log(sendAmount);
+        }
     </script>
+    <body>
+        
+    </body>
 </html>
