@@ -15,6 +15,8 @@
             lastName:"Yanala",
             DOB:"09-17-1999",
             hobbies:[
+                "Dancing",
+                "Cooking",
                 {
                     sporttype:[{
                         type1:"Handball"
@@ -30,16 +32,18 @@
             ethinicity:"Asian",
             mobileNumber:"9876980784",
             email:"ypr123@gmail.com",
-            technicalskills:["HTML","CSS","Java","MySQL"],
+            technicalskills:["HTML","CSS","Java","MySQL",{}],
             languagesKnown:"English",
 
 
 
+            
         }
         console.log(profile);
-        
-        console.log("Most favourite hobby is: "+ profile.hobbies[0].sporttype[1].type2);
-        console.log("Most another favourite hobby is: "+ profile.hobbies[0].sporttype[0].type1);
+        len=profile.hobbies.length;
+        len2=profile.hobbies[len-1].sporttype.length;
+        console.log("Most favourite hobby is: "+ profile.hobbies[len-1].sporttype[len2-1].type2);
+       console.log("Most another favourite hobby is: "+ profile.hobbies[len-1].sporttype[len2-2].type1);
     </script>
     <body>
         <img src="passphoto.jpg">
