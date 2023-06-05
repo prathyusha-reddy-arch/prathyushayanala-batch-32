@@ -8,10 +8,14 @@
     </style>
     <script>
         const hobbies=["Reading books","Listening music","Watching Tv"];
+
+        //Dispalying all hobbies
         function getAllHobbies(){
             console.log(hobbies);
             document.getElementById("getAll").innerHTML=hobbies;
         }
+
+        //Adding a hobby
        function addHobbies(){
         let newHobby=document.getElementById("pushElements").value;
         hobbies.push(newHobby);
@@ -19,6 +23,7 @@
         document.getElementById("add").innerHTML="Updated Hobbies: "+"\n" +hobbies;
        }
 
+       //Deleting a hobby
        function delHobbies(){
         let delHobby=document.getElementById("deleteHobbie").value;
         
@@ -30,29 +35,34 @@
         
        }
 
+       //Displaying all hobbie implemented using arrow function
        finalHobbies =()=>{console.log(hobbies);
         document.getElementById("delete").innerHTML = hobbies;}
        //document.getElementById("finalHobbies").innerHTML = finalHobbies();
     </script>
     <body>
+        <!--Dispalying hobbies-->
         <div id="getAll">
         <button onclick="getAllHobbies()">Get All Hobbies</button>
-        
         </div>
         <br><br>
+       <!--Adding hobbies-->
         <div>
         <input type="text" id="pushElements" >
         <button onclick="addHobbies()">Add Hobbies</button>
         <br><br>
         <p id="add" ></p>
         </div>
-    <div >
+       <!--Deleting hobbies-->
+       <div >
         <input type="text" id="deleteHobbie"  >
         <button onclick="delHobbies()">Delete Hobby</button>
         <br><br>
         <p id="del" ></p>
-    </div>
-    <div id="finalHobbies">
+        </div>
+
+        <!--Dispalying hobbies-->
+        <div id="finalHobbies">
         <button onclick="finalHobbies()">Get All Hobbies</button>
         <p id="delete"></p>
         <br><br>
