@@ -1,0 +1,37 @@
+<html>
+    <style>
+        body{
+            background-color: beige;
+            align-items: center;
+        }
+    </style>
+    <script>
+        function getProfile()
+        {
+           
+            fname=document.getElementById("fname").value;
+            lname=document.getElementById("lname").value;
+            dob=document.getElementById("dob").value;
+            emailid=document.getElementById("email").value;
+            phnno=document.getElementById("phn").value;
+           
+            document.getElementById("profile").innerHTML='Firstname :'+fname +"<br />"+"Last name : "+lname +
+            "<br />"+"DOB : "+dob +"<br />"+"EmailID : "+emailid  +"<br />"+"Phone Number : "+phnno;
+        }
+    </script>
+    <body>
+        <h1>Prathyusha Yanala</h1>
+        <div id="profile">
+            Enter  first name: <input type="text" id="fname" /><br><br>
+            Enter last name: <input type="text" id="lname" /><br><br>
+            Enter DOB : <input type="date" id="dob" /><br><br>
+            Enter emailid : <input type="text" id="email" /><br><br>
+            Enter Phn number : <input type="number" id="phn" /><br><br>
+           
+            
+        
+        <button onclick="getProfile()">Submit</button>
+       
+        </div>
+    </body>
+</html>
