@@ -15,28 +15,28 @@
             emailid=document.getElementById("email").value;
             phnno=document.getElementById("phn").value;
            
-           console.log(fname);
+       
            
             var hobby=[];
-            if(document.getElementById("hobby1").checked){
+            if(document.getElementById("hobby1").checked)
            hobby.push(document.getElementById("hobby1").value);
-           if(document.getElementById("hobby2").checked){
+           if(document.getElementById("hobby2").checked)
            
             hobby.push(document.getElementById("hobby2").value);
            
-           if(document.getElementById("hobby3").checked){
+           if(document.getElementById("hobby3").checked)
           
             hobby.push(document.getElementById("hobby3").value);
-           }
-        }
-        } document.getElementById("details").innerHTML='Firstname :'+fname +"<br />"+"Last name : "+lname +
+           
+        
+         document.getElementById("details").innerHTML='Firstname :'+fname +"<br />"+"Last name : "+lname +
             "<br />"+"DOB : "+dob +"<br />"+"EmailID : "+emailid  +"<br />"+"Phone Number : "+phnno +"<br />"+ "Hobbies : " +hobby ;
           
         }
     </script>
     <body>
         <h1>Profile details</h1>
-        <form id="form1" action="">
+        <form  action="">
             <label for ="fname"> Enter  first name:</label>
             <input type="text" id="fname" name="fname"/><br><br>
             <label for ="lname"> Enter  last name:</label>
@@ -57,7 +57,7 @@
   </form>
   <button onclick="getProfile();">Submit</button>
         <p id="details"></p>
-        <p id="hobbies"></p>
+       
    
     
     
