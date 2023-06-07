@@ -6,9 +6,10 @@
         }
     </style>
     <script>
-        function getProfile()
+       
+        function getProfile(event)
         {
-           
+           event.preventDefault();
             fname=document.getElementById("fname").value;
             lname=document.getElementById("lname").value;
             dob=document.getElementById("dob").value;
@@ -17,7 +18,7 @@
            
        
            
-            var hobby=[];
+           var hobby=[];
             if(document.getElementById("hobby1").checked)
            hobby.push(document.getElementById("hobby1").value);
            if(document.getElementById("hobby2").checked)
@@ -27,7 +28,7 @@
            if(document.getElementById("hobby3").checked)
           
             hobby.push(document.getElementById("hobby3").value);
-           
+          
         
          document.getElementById("details").innerHTML='Firstname :'+fname +"<br />"+"Last name : "+lname +
             "<br />"+"DOB : "+dob +"<br />"+"EmailID : "+emailid  +"<br />"+"Phone Number : "+phnno +"<br />"+ "Hobbies : " +hobby ;
@@ -52,10 +53,10 @@
             <input type="checkbox" id="hobby1" value="Listening music" /> Listening music<br><br>
             <input type="checkbox" id="hobby2" value="Reading books"  />Reading books<br><br>
             <input type="checkbox" id="hobby3" value="singing" />singing<br><br>
-            
+            <button onclick="getProfile(event);">Submit</button>
           
   </form>
-  <button onclick="getProfile();">Submit</button>
+  
         <p id="details"></p>
        
    
