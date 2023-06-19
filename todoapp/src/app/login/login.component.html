@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <h2>  LOGIN </h2>
+
+    Email <input type="email" id="email" placeholder="please enter your email" [(ngModel)] = "email"/>  <br/><br/>
+    Password <input type ="password" id="pwd" placeholder = "enter your password" [(ngModel)] = "password"/> 
+    <br/><br/>
+
+
+    <button type="submit"  id="submit" (click) = "Submit()">Submit</button> &nbsp;
+    <button type ="submit" id="cancel" (click) = "Cancel()">Cancel</button>
+    <p>New user ? <a  routerLink="/signup">Signup</a></p>
+    
+  </body>
+</html>

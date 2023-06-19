@@ -3,18 +3,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <nav class="topnav">
   <ul>
-    <li>Profile</li>
+    <li><a class="button" routerLink="/profile">Profile</a></li>
     <li>Contact</li>
     
    
-    <li (click)="toggleLogin()">{{loginText}}</li>
-    
+    <li (click)="toggleLogin()"><a class="button" routerLink="/login">{{loginText}}</a></li>
+    <li>  <a class="button" routerLink="/signup">Signup</a> </li>
     <li class="search-bar">
       <input type="text" placeholder="Search.." name="search">
       <button type="submit" ><i class="fa fa-search"></i></button>
     </li>
   </ul>
 </nav>
+  <router-outlet></router-outlet>
 </body>
 
 </html>

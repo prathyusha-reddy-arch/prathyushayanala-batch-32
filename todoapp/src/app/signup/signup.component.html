@@ -1,0 +1,32 @@
+<html>
+  <body>
+    <h2>  SIGN UP </h2>
+    <div>
+     
+
+      FirstName: <input type="text" id="fname" placeholder="enter your first name" [(ngModel)]="fname"/>
+      <br/>
+      LastName: <input type="text" id="lname" placeholder="enter your last name" [(ngModel)]="lname"/>
+      <br/>
+
+    
+      Phone: <input type="phone" id="phone" placeholder="enter phonenumber" [(ngModel)]="phone"/>
+      <br/>
+      Email: <input type="email" id="email" placeholder="enter valid email" [(ngModel)]="email"/>
+      <br/>
+      Username: <input type="text" id="uname" placeholder="enter username" [(ngModel)]="username"/><br/>
+      Password: <input type="password" id="pwd" placeholder="enter 8 digits password" [(ngModel)]="pwd"/>
+      <br/>
+      Confirm Password: <input type="password" id="pwd" placeholder="enter same password as above" [(ngModel)]="cpwd"/>
+      <br/> <br/>
+
+      <button type = "submit" (click)="submit()">Submit</button> &nbsp;
+      <button type="reset">Reset</button>
+
+  
+      
+    </div>
+
+    </body>
+      
+</html>
