@@ -14,6 +14,9 @@ export class ProfileComponent implements OnInit {
   dob:Date=new Date();
   email:string='';
   hobby:string='';
+
+ 
+  
   constructor() { }
 
   ngOnInit() {

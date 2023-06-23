@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../authservice/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router,private authService:AuthService) { }
 
   ngOnInit() {
   }
@@ -15,13 +17,23 @@ export class LoginComponent implements OnInit {
   email:string = '';
   password:string = '';
 
- 
+ flag:any;
 
 
- Submit()
+ onLogin()
   {
-   console.log("Email is: " +this.email)
-   console.log("Password is: " +this.password)
+    if (this.email === 'ypr@gmail.com' &&
+      this.password === '12345') {
+        console.log('user Authenticatesd');
+        this.authService.isLoggedIn = true;
+        this.router.navigate(['/profile']);
+        this.flag=true;
+    } else {
+      console.log('user NOT Authenticatesd');
+      this.authService.isLoggedIn = false;
+      this.flag=false;
+     alert('InValid details!!!')
+    }
   }
 
   Cancel(){
