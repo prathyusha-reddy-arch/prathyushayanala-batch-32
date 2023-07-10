@@ -1,0 +1,17 @@
+
+  <div class="sidebar">
+    <button class="btn btn-light" type="button" (click)="clickSubmissions()">Submissions</button><br>
+    <br>
+    <button class="btn btn-light" type="button" (click)="clickStudent()">Students</button>
+  </div>
+
+  <div class="content">
+    <div *ngIf="isClicked">
+<app-Submissions></app-Submissions>
+    </div>
+
+    <div class="content">
+      <div *ngIf="studentClicked" >
+  <app-Students></app-Students>
+      </div>
+  </div>
